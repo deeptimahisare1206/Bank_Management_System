@@ -29,9 +29,8 @@
             <p class="text-green-800">Registration Successful!</p><%
                 }
 
-
             %>
-            <form action="createaccount" method="POST" class="jutify-center  grid grid-cols-2 gap-2 p-4" >
+            <form action="createaccount" method="POST" enctype="multipart/form-data" class="jutify-center  grid grid-cols-2 gap-2 p-4" >
 
                 <!--<table>-->
 
@@ -70,7 +69,7 @@
                     <option value="Checking">Checking</option>
                     <option value="Saving">Saving</option>
                 </select>
-                <input type="file" name="pic" class="" accept=".png,.jpg,.jpeg">
+                <input type="file" name="profile" class="" accept=".png,.jpg,.jpeg">
                 <!--<br>-->
                 <input type="submit" value="Create"  class="text-xl bg-teal-900 text-white w-fit px-2 py-1">
                 <input type="reset" value="Reset"class="text-xl bg-teal-900 text-white w-fit px-2 py-1">

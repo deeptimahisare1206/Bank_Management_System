@@ -3,20 +3,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
 import universal_connect.DatabaseConnect;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.Part;
 
 /**
  *
  * @author deept
  */
+@MultipartConfig
 @WebServlet(urlPatterns = {"/createaccount"})
 public class createaccount extends HttpServlet {
 
@@ -84,17 +90,37 @@ public class createaccount extends HttpServlet {
         String password = request.getParameter("pass");
         String confirmpass = request.getParameter("confirmpass");
         String acctype = request.getParameter("acctype");
+        Part file = request.getPart("profile");
+        String filename = file.getSubmittedFileName();
 
-        String query = "insert into user(firstname, lastname, birthdate, address, gmail,phoneno, password, accType)values(?,?,?,?,?,?,?,?)";
+        String query = "insert into user(firstname, lastname, birthdate, address, gmail,phoneno, password, accType,image)values(?,?,?,?,?,?,?,?,?)";
 
         try {
             Connection connect = DatabaseConnect.getconnection();
-            PreparedStatement pst = connect.prepareStatement(query);
+//            =======================Image===============================
+            String drivepath = "E:/2.1Bank_Management/web/img"+filename;
+            FileOutputStream fos = new FileOutputStream(drivepath);
+            InputStream is = file.getInputStream();
+            byte[] imageData = new byte[is.available()];
+            is.read(imageData);
+            fos.write(imageData);
+            
+
+
+//           ==============================================================
 
             if (!password.equals(confirmpass)) {
-//                pw.print("Incorrect password");
                 response.sendRedirect("createAccount.jsp?wrongpass=wrong");
+            } 
+                PreparedStatement pst1 = connect.prepareStatement("select * from user where gmail=?");
+            pst1.setString(1, gmail);
+            ResultSet rs = pst1.executeQuery();
+            if (rs.isBeforeFirst()) {
+                response.sendRedirect("createAccount.jsp?wrongpass=same");
             } else {
+                
+                
+                    PreparedStatement pst = connect.prepareStatement(query);
                 pst.setString(1, fname);
                 pst.setString(2, lname);
                 pst.setString(3, dob);
@@ -103,9 +129,13 @@ public class createaccount extends HttpServlet {
                 pst.setLong(6, mobile);
                 pst.setString(7, password);
                 pst.setString(8, acctype);
-
+                pst.setString(9, filename);
+//                ResultSet rs2 = pst.executeQuery();
                 int i = pst.executeUpdate();
                 if (i > 0) {
+                    String path = getServletContext().getRealPath("")+"img";
+                file.write(path + File.separator + filename);
+             
                     response.sendRedirect("createAccount.jsp?wrongpass=success");
                 } else {
                     response.sendRedirect("createAccount.jsp?wrongpass=wrong");

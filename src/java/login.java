@@ -3,13 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
-import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.IOException;
+import java.sql.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import universal_connect.DatabaseConnect;
 
 /**
  *
@@ -70,7 +73,33 @@ public class login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        PrintWriter pw = response.getWriter();
+        response.setContentType("text/html");
+        
+        String accmail = request.getParameter("accemail");
+        String password = request.getParameter("password");
+        
+        String query = "select * from user where accountno=? or gmail=? and password =?";
+        try {
+            Connection connect = DatabaseConnect.getconnection();
+            PreparedStatement pst = connect.prepareStatement(query);
+            pst.setString(1, accmail);
+            pst.setString(2, accmail);
+            pst.setString(3, password);
+            
+            ResultSet rs = pst.executeQuery();
+            
+            if(rs.isBeforeFirst()){
+                HttpSession session = request.getSession();
+                session.setAttribute("user", accmail);
+              response.sendRedirect("userHome.jsp?msg=success");
+            } else {
+                response.sendRedirect("login.jsp?msg=incorrect");
+
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     /**
