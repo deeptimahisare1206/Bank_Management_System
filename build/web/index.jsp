@@ -26,8 +26,23 @@
             <img src="./Tablet-Banking.png" alt="alt" class=""/>
         </div>
         </div>
-        <div class=" mt-10 h-screen flex justify-center">
+        <div class=" mt-10 h-screen flex justify-center items-center flex-col">
             <p class="text-5xl">About us</p>
-        </div>
+            <div class="p-6">
+                <p>About Us
+Welcome to [Bank Name], your trusted partner for all things banking, providing a seamless and secure online banking experience. We believe that managing your finances should be easy, convenient, and accessible anytime, anywhere. With our cutting-edge digital platform, we offer a full range of banking services designed to meet the needs of both individuals and businesses in today’s fast-paced, tech-driven world.
+
+At [Bank Name], we’re committed to delivering a personalized banking experience that puts you in control. Whether you're checking your account balance, making payments, transferring funds, or applying for loans, our user-friendly website makes banking as simple as a few clicks. You can access your accounts on the go, manage your finances, and track your transactions securely at your convenience.
+
+Our Services:
+
+Account Management: Open, manage, and monitor your accounts with ease.
+Transfers & Payments: Send money, pay bills, and make transfers instantly and securely.
+Loans & Credit: Apply for personal loans, business loans, or credit cards, and track your approval process.
+Investments: Access a range of investment opportunities to help you grow your wealth.
+Customer Support: Get timely and professional assistance via chat, email, or phone, ensuring your questions are answered whenever needed. </p>
+                <img src="./Tablet-Banking.png" alt="alt"/>
+            </div>
+             </div>
     </body>
 </html>
