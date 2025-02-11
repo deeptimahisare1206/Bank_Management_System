@@ -41,7 +41,7 @@
                     String userl = rs.getString("lastname");
                     String image = rs.getString("image");
         %>
-        <img src="img/<%=image%>" height="500" width="500" alt="alt" class="rounded-3xl"/>
+        <img src="img/<%=image%>" height="300" width="300" alt="alt" class="rounded-3xl"/>
         <p class="text-pink-900 text-6xl">Welcome <%=userf%>  <%=userl%> ji....😊</p>
         <%
                 }
