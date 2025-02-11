@@ -37,34 +37,34 @@
 
 
                 <input type="text" name="fname"   placeholder="First Name"
-                       class="text-2xl bg-transparent border-b-2 border-teal-900 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none">
+                       class="text-xl bg-transparent border-b-2 border-teal-900 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none">
                 <input type="text" name="lname"  placeholder="Last Name"
 
-                       class="text-2xl bg-transparent border-b-2 border-teal-900 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none">
+                       class="text-xl bg-transparent border-b-2 border-teal-900 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none">
 
                 <input type="date" name="dob"
-                       class="text-2xl bg-transparent border-b-2 border-teal-900 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none">
-                <textarea id="id" name="add" rows="2" cols="20" placeholder="Address"   class="text-2xl bg-transparent border-teal-900 border-b-2 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none"></textarea>
+                       class="text-xl bg-transparent border-b-2 border-teal-900 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none">
+                <textarea id="id" name="add" rows="2" cols="20" placeholder="Address"   class="text-xl bg-transparent border-teal-900 border-b-2 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none"></textarea>
                 <input type="email" name="mail" placeholder= "Gmail"
-                       class="text-2xl bg-transparent border-b-2 p-2 border-teal-900 focus:shadow-xl focus:shadow-slate-300 outline-none">
+                       class="text-xl bg-transparent border-b-2 p-2 border-teal-900 focus:shadow-xl focus:shadow-slate-300 outline-none">
 
 
                 <input type="number" name="mobile" placeholder="Mobile No."
-                       class="text-2xl bg-transparent border-b-2 border-teal-900 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none">
+                       class="text-xl bg-transparent border-b-2 border-teal-900 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none">
 
 
 
                 <input type="password" name="pass" placeholder="Password"
-                       class="text-2xl bg-transparent border-b-2 border-teal-900 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none">
+                       class="text-xl bg-transparent border-b-2 border-teal-900 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none">
                 <input type="password" name="confirmpass" placeholder="Confirm Password"
-                       class="text-2xl bg-transparent border-b-2 border-teal-900 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none">
+                       class="text-xl bg-transparent border-b-2 border-teal-900 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none">
 
 
                 <!--<input type="submit" value="Ok      "class="text-3xl bg-transparent">-->
                 <!--<a href="index.html"><img src="./img/icon.png" height="40px"width="80px;" alt="alt"/></a>-->
 
 
-                <select class="text-2xl bg-transparent border-b-2 border-teal-900 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none" name="acctype">
+                <select class="text-xl bg-transparent border-b-2 border-teal-900 p-2 focus:shadow-xl focus:shadow-slate-300 outline-none" name="acctype">
                     <option value="null">Select Account type</option>
                     <option value="Checking">Checking</option>
                     <option value="Saving">Saving</option>

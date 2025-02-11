@@ -28,8 +28,8 @@
         </div>
         <div class=" mt-10 h-screen flex justify-center items-center flex-col">
             <p class="text-5xl">About us</p>
-            <div class="p-6">
-                <p>About Us
+            <div class="p-6 flex text-justify">
+                <p class="p-6">About Us
 Welcome to [Bank Name], your trusted partner for all things banking, providing a seamless and secure online banking experience. We believe that managing your finances should be easy, convenient, and accessible anytime, anywhere. With our cutting-edge digital platform, we offer a full range of banking services designed to meet the needs of both individuals and businesses in today’s fast-paced, tech-driven world.
 
 At [Bank Name], we’re committed to delivering a personalized banking experience that puts you in control. Whether you're checking your account balance, making payments, transferring funds, or applying for loans, our user-friendly website makes banking as simple as a few clicks. You can access your accounts on the go, manage your finances, and track your transactions securely at your convenience.
