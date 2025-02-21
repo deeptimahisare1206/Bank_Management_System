@@ -1,4 +1,8 @@
-
+<%-- 
+    Document   : Display
+    Created on : Sep 26, 2024, 1:34:04 PM
+    Author     : deept
+--%>
 
 <%@page import="java.sql.*"%>
 <%@page import="universal_connect.DatabaseConnect"%>

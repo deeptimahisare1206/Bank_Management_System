@@ -21,8 +21,9 @@
                     <li><a href="./login.jsp">LOGIN</a></li> 
                     <li><a href="createAccount.jsp">SIGNUP</a></li>  
                     <li><a href="contacts.jsp"> CONTACTS</a></li> 
-                    <li><a href="./imageUp.html"> Image</a></li>  
-                    <li><a href="viewImage.jsp"> Display Image </a></li>  
+                    <li><a href="adminLogin.jsp"> ADMIN</a></li> 
+                    <!--<li><a href="./imageUp.html"> Image</a></li>-->  
+                    <!--<li><a href="viewImage.jsp"> Display Image </a></li>-->  
 
   
 

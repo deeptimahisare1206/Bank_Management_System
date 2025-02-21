@@ -28,6 +28,7 @@
         <p class="text-green-800 text-4xl">Login success.</p>
         <%
             }
+if(user!=null){
 
             try {
                 String query = "select * from user where accountno=? or gmail=?";
@@ -48,7 +49,10 @@
 
             } catch (Exception e) {
                 System.out.println(e.getMessage());
-            }
+            }}
+else{
+    response.sendRedirect("login.jsp");
+}
         %>
         </div>
     </body>

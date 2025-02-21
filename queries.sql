@@ -12,6 +12,18 @@ accountno bigint primary key auto_increment,
     image varchar(255)
 
 );
-alter table user auto_increment=10000000;
-drop table user;
-select * from user;
+alter table user auto_increment=101;
+truncate table user;
+select * from bank_management.user;
+
+
+
+create table contacts(
+Sno int primary key auto_increment,
+Name varchar(255),
+    Email varchar(255),
+     Message varchar(2000)
+);
+
+select * from bank_management.contacts;
+
